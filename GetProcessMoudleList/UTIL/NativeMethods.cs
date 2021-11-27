@@ -6,8 +6,12 @@ namespace BypassCrc
 {
     public class NativeMethods
     {
+
         [DllImport("Kernel32.dll")]
         public static extern bool CloseHandle(IntPtr hObject);
+        [DllImport("ntdll.dll", SetLastError = true)]
+        public static extern Ntstatus RtlCreateUserThread(IntPtr processHandle, IntPtr threadSecurity, bool createSuspended, Int32 stackZeroBits, IntPtr stackReserved, IntPtr stackCommit, IntPtr startAddress, IntPtr parameter, ref IntPtr threadHandle, IntPtr clientId);
+       
         [DllImport("ntdll.dll")]
         public static extern Ntstatus NtCreateSection(ref IntPtr sectionHandle, AccessMask DesiredAccess, IntPtr objectAttributes, ref long MaximumSize, MemoryProtectionConstraints SectionPageProtection, SectionProtectionConstraints AllocationAttributes, IntPtr fileHandle);
         [DllImport("ntdll.dll")]

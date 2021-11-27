@@ -42,6 +42,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,7 +154,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(400, 313);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 102);
+            this.button3.Size = new System.Drawing.Size(101, 145);
             this.button3.TabIndex = 9;
             this.button3.Text = "Open file";
             this.button3.UseVisualStyleBackColor = true;
@@ -176,11 +177,23 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "File directory:";
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.Location = new System.Drawing.Point(12, 414);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(371, 44);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Hollowing Shellcode";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 420);
+            this.ClientSize = new System.Drawing.Size(509, 470);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button3);
@@ -220,6 +233,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button4;
     }
 }
 
